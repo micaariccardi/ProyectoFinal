@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "CrearPerfil";
+}
+
+<body>
+    <h2 class="titulo">Crear Perfil</h2>
+    <div class="crearPerfil-container">
+        <div class="cuadrado">
+            <form class="formCrearPerfil" method="post" action='@Url.Action("C_GuardarPerfil", "Home")'>
+                <input type="hidden" name="idUsuario" value="@ViewBag.idUsuario">
+                <div class="infoPerfil">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="Nombre" autocomplete="off" required>
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="Apellido" autocomplete="off" required>
+
+                    <label for="Telefono">Teléfono</label>
+                    <input type="number" id="Telefono" name="Telefono" autocomplete="off" required>
+
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="Email" autocomplete="off" required>
+
+                    <label for="idHospital">Hospital</label>
+                    <input type="hidden" id="idHospital" name="IdHospital" value="">
+                    <input type="text" id="nombreHospital" list="datalistHospitalesMuestra" name="Hospital" autocomplete="off" required><br>
+                    <datalist id="datalistHospitalesMuestra">
+                        @foreach (Hospital hospital in ViewBag.Hospitales)
+                        {
+                            <option value="@hospital.NombreHospital" data-id="@hospital.IdHospital"></option>
+                        }
+                    </datalist>
+
+                    <h3>Permisos:</h3>
+                    <div class="permisos">
+                        <div class="permiso">
+                            <span>Lectura:</span>
+                            <label for="Lectura" class="switch">
+                                <input type="checkbox" id="Lectura" name="Lectura" value="true">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="permiso">
+                            <span>Edición:</span>
+                            <label for="Edicion" class="switch">
+                                <input type="checkbox" id="Edicion" name="Edicion" value="true">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="permiso">
+                            <span>Impresión:</span>
+                            <label for="Impresion" class="switch">
+                                <input type="checkbox" id="Impresion" name="Impresion" value="true">
+                                <span class="slider"></span>
+                            </label>
+                        </div>  
+                        <div class="permiso">
+                            <span>Mantener activo:</span>
+                            <label for="mantenerActivo" class="switch">
+                                <input type="checkbox" id="mantenerActivo" name="mantenerActivo" value="true">
+                                <span class="slider"></span>
+                            </label>
+                        </div>  
+                    </div>
+
+                    <label for="Contrasena">Contraseña</label>
+                    <input type="password" id="Contrasena" name="Contrasena" autocomplete="off" required>
+                    <button type="submit" class="botonPerfil">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

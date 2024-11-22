@@ -1,0 +1,876 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+:root {
+  --azul: #00276a;
+  --celeste: #e4f3ff;
+  --blanco: #f4f4f4;
+  --negro: #333;
+}
+
+body {
+  margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+header {
+  background-color: #F9F9F9;
+  padding: 10px 0;
+  border-bottom: 2px solid #03348a; 
+}
+
+a {
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: lighter; /* Corregido el valor de font-weight */
+}
+
+/*subir muestra estilo*/
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+.form-container {
+  max-width: 80%;
+  margin-left: 1em;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.h3 {
+  margin-left: 1.5em;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+button {
+  background-color: #03348a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.hidden {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.logo img {
+  max-width: 16em; 
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-weight: lighter;
+}
+
+.nav-links li {
+  margin-right: 2em;
+  font-weight: lighter;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+  font-weight: lighter;
+}
+
+.nav-links .linkHeader {
+  color: #00276A;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: lighter;
+}
+
+.nav-links .linkHeader:hover {
+  color: #7d99e5;
+  font-weight: lighter;
+}
+
+/*BOTONES*/
+
+.button-container {
+  margin-top: 4.5em;
+  padding: 3em;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.button-with-image {
+  display: flex;
+  align-items: center;
+}
+
+.button-with-image img {
+  height: 4.7em; 
+  width: auto;
+  margin-right: 2em; 
+}
+
+.linkHome {
+  width: 17em;
+  height: 3em;
+  background-color: #ffffff;
+  margin-right: 5em;
+  color: #003A9F;
+  border: none;
+  border-radius: 0.6em;
+  box-shadow: 2px 2px 8px rgba(97, 93, 93, 0.5);
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: lighter;
+}
+
+.botonHeader{
+  width: 17em;
+  height: 3em;
+  background-color: #ffffff;
+  margin-right: 3em;
+  color: #003A9F;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.linkHome:hover {
+  background-color: #c2e1ee;
+  font-weight: lighter;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section legend {
+  font-size: 20px;
+  font-weight: bold; /* Mantener el grosor del texto para los títulos */
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.form-section legend + * {
+  font-weight: lighter; /* Reducir el grosor del texto para los subtítulos */
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Mantener el grosor del texto para las etiquetas */
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="number"],
+.form-section input[type="tel"],
+.form-section input[type="date"],
+.form-section select,
+.form-section textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-section select {
+  width: 100%;
+}
+
+/* Ajustes para los campos de fecha */
+.form-section input[type="datetime-local"],
+.form-section input[type="datetime-local"] + br {
+  margin-bottom: 15px; /* Aumenta el espacio entre campos de fecha */
+}
+
+.form-section input[type="submit"]:hover {
+  background-color: #03348a;
+}
+
+/*OPCIONAL*/
+.opcional{
+  color: #6e6e6e;
+  font-size: 0.8em;
+}
+
+/*lISTAS SIN PROCESAR (TEMPORAL)*/
+
+.muestra-form-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.muestra-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  width: 10em !important;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+/*INICIO SESION*/
+
+/* Estilos generales del formulario */
+.formInicioSesion {
+  max-width: 500px;
+  margin: 2em auto; 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el título del formulario */
+.formInicioSesion h1 {
+  color: #03348a;
+  margin-bottom: 1.5em;
+  font-size: 1.8em; /* Tamaño del texto del título */
+  text-align: center;
+}
+
+/* Estilo para los contenedores de los campos de entrada */
+.form-floating {
+  width: 100%; /* Asegura que los campos ocupen el ancho completo del formulario */
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+/* Estilo para los campos de entrada */
+.form-floating .form-control {
+  width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+  padding: 0.75em 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+.form-floating label {
+  position: absolute;
+  top: 0.75em;
+  left: 1em;
+  padding: 0 0.25em;
+  background-color: #fff; /* Fondo blanco para la etiqueta */
+  color: #333;
+  transition: 0.2s ease;
+  pointer-events: none; /* Hace que la etiqueta no interfiera con el clic */
+}
+
+.form-floating .form-control:focus + label,
+.form-floating .form-control:not(:placeholder-shown) + label {
+  top: -0.5em;
+  left: 1em;
+  font-size: 0.75em;
+  color: #03348a; /* Color de la etiqueta cuando el campo está en foco */
+}
+
+/* Estilo para el checkbox */
+.checkbox {
+  width: 100%;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox label {
+  font-size: 0.9em;
+}
+
+/* Estilo para el botón de envío */
+button.btn-primary {
+  width: fit-content;
+
+  background-color: #03348a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para las alertas de error */
+.alert-danger {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+/*HOSPITALES*/
+
+.infoHospi
+{
+    background-color: #cadbff;
+    border-radius: 0.9em;
+    width: 82em; 
+    height:11em;
+    border: none;
+    border-radius: 0.6em;
+    box-shadow: 2px 2px 8px rgba(97, 93, 93, 0.5);
+}
+
+.cont
+{
+    margin-top: 5em;
+    padding: 0em;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:left;
+}
+
+/*MODAL*/
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 2em;
+  
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 3em;
+    border: 1px solid #888;
+    width: 60em;
+    border-radius: 2.5em;
+}
+.stroke
+{
+    border-bottom: 0.1em solid #003A9F;
+    width: 60em;
+    margin-bottom:1.5em;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 0.7em;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*BOTON AGREGAR*/
+
+.button  {
+    width: 17em;
+    height: 3em;
+    background-color: #ffffff;
+    margin-right: 3em;
+    border: none;
+    border-radius: 0.6em;
+    box-shadow: 2px 2px 8px rgba(97, 93, 93, 0.5);
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+/*EMAILS*/
+
+.email-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    gap: 0.3em; 
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    padding: 0.2em;
+}
+
+.email-item span {
+    margin-right: 0.3em;
+}
+
+.email-item button {
+    margin-left: 1em;
+    background-color:#00276A;
+    color: rgb(255, 255, 255);
+    border: none;
+    height: 1.5em;
+    width: 5em;
+    border-radius: 0.7em;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    box-shadow: none; /* Elimina cualquier sombra que pueda estar aplicada */
+}
+
+
+.email {
+    width: 12em;
+    height: 1.41em;
+    margin-right: 3em;
+    bottom: 3em;
+    color: #00276A;
+    background-color: #e5ebf1;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+
+.infoHospi {
+    position: relative;
+    background-color: #e4f3ff;
+    border-radius: 0.9em;
+    width: 72em; 
+    height:10em;
+    border: none;
+    border-radius: 0.6em;
+    padding: 1em;
+    text-align: left; 
+    font-size: 1em;
+    margin-top: 1em; 
+}
+
+.mas-info-btn {
+    background-color: #022f7c; 
+    color: #fff;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    width: 10em;
+    height:2.5em;
+    position: absolute;
+    bottom: 4em; 
+    right: 1em; 
+    padding: 0.5em 1em; 
+
+}
+
+.mas-info-boton {
+    position: left; 
+    margin-left: 67em;
+    background-color: #022f7c;
+    color: #fff;
+    margin-top:3em;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    width:11em;
+    font-size: 1.2em;
+}
+/*BUSCADOR DE HOSPITAL*/
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 0.063em solid #ccc; 
+    border-radius: 0.25em; 
+    padding: 0.313em; 
+    width: 15.625em; 
+}
+
+.search-container input[type="text"] {
+    border-color: #00276A;
+    outline: none;
+    flex-grow: 1;
+    padding: 0.313em; /* 5px convertido a em */
+}
+
+
+.icono-buscar {
+    font-size: 1em;
+    color: #888;
+    padding: 1em;
+    width: 1em;
+    height:1em;
+}
+
+/*INPUT DE NOMBRES , EMAILS Y REFERENTES*/
+
+.nombre-ingresado {
+    width: 12em;
+    height: 1.41em;
+    margin-right: 3em;
+    bottom: 3em;
+    color: #00276A;
+    background-color: #e5ebf1;
+    border-radius: 1em;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* CREAR PERFIL */
+
+.crearPerfil-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background-color: var(--celeste);
+  margin: 5%;
+}
+
+.crearPerfilContainer h3 {
+  margin-left: 1.5em;
+  color: #333;
+}
+.crearPerfil-container input[type="text"],
+.crearPerfil-container input[type="email"],
+.crearPerfil-container input[type="number"],
+.crearPerfil-container input[type="tel"],
+.crearPerfil-container input[type="password"],
+.crearPerfil-container input[type="date"],
+.crearPerfil-container select,
+.crearPerfil-container textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.titulo {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cuadrado {
+  padding: 15px;
+  width: 100%;
+  margin: 1em 1em 1em 1em;
+  background-color: var(--celeste);
+}
+
+.infoPerfil {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.permisos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.permiso {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--azul);
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.botonPerfil {
+  background-color: var(--azul);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+
+.botonPerfil:hover {
+  background-color: #0056b3;
+}
+
+.formCrearPerfil {
+  width: auto;
+}
+
+/* MODAL */
+
+h2 {
+  color: #007bff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Botón "Agregar hospital" */
+.btn-primary {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Contenedor de las tarjetas de hospitales */
+.hospitales-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 10px;
+}
+
+/* Tarjetas de hospitales */
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1em;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-text + .card-text {
+  margin-top: 0.5rem;
+}
+
+.card-body button {
+  display: flex;
+  background-color: #007bff;
+  width: fit-content;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-body button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #007bff;
+}
+
+.modal-title {
+  color: #0056b3;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  font-size: 1.1rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-footer button {
+  border-radius: 5px;
+  align-items: center;
+}
+
+/* Botones de la modal */
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-close {
+  font-size: 1.5rem;
+  color: #007bff;
+}
